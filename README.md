@@ -4,7 +4,14 @@ This GitHub repository contains Dockerfiles for running a set of Continuous Inte
 
 ![Docker CI Tools](screenshots/docker-ci-tools.png)
 
+<<<<<<< HEAD
 Blog article on the CI Docker Container, https://blog.codecentric.de/en/2015/10/continuous-integration-platform-using-docker-container-jenkins-sonarqube-nexus-gitlab
+=======
+```
+module "ec2_cluster" {
+  source                 = "terraform-aws-modules/ec2-instance/aws"
+  version                = "~> 2.0"
+>>>>>>> a450575f5e47e835bb15e3fb8e467a2a252f6605
 
 > I use this repository for workshops. This is not production ready.
 > For production I use a configuration management tool like Ansible to provision all docker containers and store passwords and keys in ansible vault.
@@ -46,6 +53,7 @@ If there´s also docker-machine on your machine, don´t forget to do the mention
 
 ### Step 1 - Create needed osxfs mountpoints
 
+<<<<<<< HEAD
 Create folders (see [Issue 26](https://github.com/marcelbirkner/docker-ci-tool-stack/issues/26))
 
 Create a folder in the root directory "/" (Macintosh HD) and name it as __opt__
@@ -193,3 +201,30 @@ docker-machine create --driver virtualbox --virtualbox-memory 6000 docker-ci-v1
 # Configure shell environment
 eval $(docker-machine env docker-ci-v1)
 ```
+=======
+
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.12.6 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.24 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.24 |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [aws_instance.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance) | resource |
+
+
+>>>>>>> a450575f5e47e835bb15e3fb8e467a2a252f6605
