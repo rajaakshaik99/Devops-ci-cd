@@ -1,12 +1,4 @@
 # CI Tools Demo
-
-This GitHub repository contains Dockerfiles for running a set of Continuous Integration Tools with a single command. The diagram contains all tools used in the Docker containers.
-
-![Docker CI Tools](screenshots/docker-ci-tools.png)
-
-<<<<<<< HEAD
-Blog article on the CI Docker Container, https://blog.codecentric.de/en/2015/10/continuous-integration-platform-using-docker-container-jenkins-sonarqube-nexus-gitlab
-=======
 ```
 module "ec2_cluster" {
   source                 = "terraform-aws-modules/ec2-instance/aws"
@@ -53,7 +45,6 @@ If there´s also docker-machine on your machine, don´t forget to do the mention
 
 ### Step 1 - Create needed osxfs mountpoints
 
-<<<<<<< HEAD
 Create folders (see [Issue 26](https://github.com/marcelbirkner/docker-ci-tool-stack/issues/26))
 
 Create a folder in the root directory "/" (Macintosh HD) and name it as __opt__
@@ -135,9 +126,6 @@ docker-compose -f docker-compose-selenium.yml up
 | Jenkins | http://${docker-machine ip default}:18080/ | no login required |
 | SonarQube | http://${docker-machine ip default}:19000/ | admin/admin |
 | Nexus | http://${docker-machine ip default}:18081/nexus | admin/admin123 |
-| GitLab | http://${docker-machine ip default}/ | root/5iveL!fe |
-| Selenium Grid | http://${docker-machine ip default}:4444/grid/console | no login required |
-| Conference App | http://${docker-machine ip default}:48080/currentSessions | no login required |
 
 #### With Docker Mac Native
 
@@ -146,9 +134,6 @@ docker-compose -f docker-compose-selenium.yml up
 | Jenkins | http://localhost:18080/ | no login required |
 | SonarQube | http://localhost:19000/ | admin/admin |
 | Nexus | http://localhost:18081/ | admin/admin123 |
-| GitLab | http://localhost | root/5iveL!fe |
-| Selenium Grid | http://localhost:4444/grid/console | no login required |
-| Conference App | http://localhost:48080/currentSessions | no login required |
 
 ## Screenshots
 
@@ -168,14 +153,9 @@ The Jobs cover the following tasks:
 - Continuous Integration Build with Maven
 - Unit Tests
 - Static Source Analysis results are stored in SonarQube
-- JaCoCo Test Coverage
-- Deployment to Nexus
 - Jenkins Job DSL examples
-- Selenium UI Test
 
-![Conference App Jobs](screenshots/jenkins-jobs-1.png)
 
-![Conference App CI Job](screenshots/jenkins-jobs-2-conference-app-ci.png)
 
 ### SonarQube Dashboard
 
@@ -195,11 +175,7 @@ In order to test new versions, I prefer starting out with a blank VirtualBox ima
 That eliminates any side effects. Afterwards you can throw away the image.
 
 ```
-# Create new image
-docker-machine create --driver virtualbox --virtualbox-memory 6000 docker-ci-v1
 
-# Configure shell environment
-eval $(docker-machine env docker-ci-v1)
 ```
 =======
 
@@ -227,4 +203,3 @@ No modules.
 | [aws_instance.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance) | resource |
 
 
->>>>>>> a450575f5e47e835bb15e3fb8e467a2a252f6605
